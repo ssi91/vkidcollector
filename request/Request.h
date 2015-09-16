@@ -48,7 +48,7 @@ namespace vkmes
 		Request(const char *_token);
 		~Request();
 		bool auth() const;
-		void *req(const char *uri, Stack< sp > &_paramStack, const bool paramType = 0);
+		std::string * req(const char *uri, Stack< sp > &_paramStack, const bool paramType = 0);
 	};
 
 }

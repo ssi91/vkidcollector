@@ -139,13 +139,7 @@ namespace vkmes
 		return result;
 	}
 
-//	bool Request::auth() const
-//	{
-//		char *token = getToken();
-//		return false;
-//	}
-
-	void *Request::req(const char *uri, Stack< sp > &_paramStack, const bool paramType)
+	std::string *Request::req(const char *uri, Stack< sp > &_paramStack, const bool paramType)
 	{
 		CURL *curl;
 		CURLcode result;
