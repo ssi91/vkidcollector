@@ -169,6 +169,14 @@ namespace vkmes
 				url = addGetParam(url, "access_token", token);
 
 			}
+			if (req_counter == 3)
+			{
+				sleep(1);
+				req_counter = 0;
+			}
+			else if (req_counter < 3)
+				++req_counter;
+
 			curl_easy_setopt(curl, CURLOPT_ERRORBUFFER, &errorBuffer);
 			curl_easy_setopt(curl, CURLOPT_URL, url);
 			curl_easy_setopt(curl, CURLOPT_HEADER, 0); //TODO уметь редактировать через параметр
@@ -197,5 +205,6 @@ namespace vkmes
 		secretKey = NULL;
 		code = NULL;
 		buffer = NULL;
+		req_counter = 0;
 	}
 }

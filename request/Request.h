@@ -35,6 +35,7 @@ namespace vkmes
 		char *code;
 		char *clientId;
 		std::string *buffer;
+		size_t req_counter;
 
 		char *addGetParam(char *link, const char *pKey, const char *val) const;
 		char *getToken() const;
