@@ -22,6 +22,7 @@ namespace vkmes
 		char *value;
 
 		sp(const char *_key = NULL, const char *_value = NULL);
+		sp(const char *_key, const int _value);
 		sp(const sp &_sp);
 		~sp();
 		sp &operator=(const sp &_sp);

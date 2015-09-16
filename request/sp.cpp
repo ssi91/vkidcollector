@@ -4,10 +4,32 @@
 
 #include "Request.h"
 #include <string.h>
+//#include <sstream>
 #include "../renderexception.h"
 
 namespace vkmes
 {
+	sp::sp(const char *_key, const int _value)
+	{
+		std::stringstream ss;
+		ss << _value;
+		std::string _valStr = ss.str();
+
+		value = new char[_valStr.size() + 1];
+		strcpy(value, _valStr.c_str());
+		if (_key)
+		{
+			key = new char[strlen(_key) + 1];
+			strcpy(key, _key);
+		}
+		else
+		{
+			key = NULL;
+			value = NULL;
+//			LOG_TRACE("Key or Value is null")
+		}
+	}
+
 	sp::sp(const char *_key, const char *_value)
 	{
 		if (_key && _value)
