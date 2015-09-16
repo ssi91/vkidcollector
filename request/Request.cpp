@@ -3,9 +3,6 @@
 //
 
 #include "Request.h"
-#include <string.h>
-#include "../renderexception.h"
-#include <iostream>
 
 namespace vkmes
 {

@@ -8,8 +8,11 @@
 #include <curl/curl.h>
 #include <string>
 #include "../Stack.h"
-#include <mongo/client/dbclient.h>
-#include <mongo/client/gridfs.h>
+#include <sstream>
+#include <string.h>
+#include "../renderexception.h"
+#include <iostream>
+#include <unistd.h>
 
 namespace vkmes
 {
