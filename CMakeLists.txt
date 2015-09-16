@@ -22,6 +22,7 @@ set(SOURCE_FILES
         Stack.h
         request/Request.cpp
         request/sp.cpp
+        collect_func.cpp
 )
 add_executable(vkidcollector ${SOURCE_FILES})
 target_link_libraries(vkidcollector
