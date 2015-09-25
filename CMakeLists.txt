@@ -3,8 +3,10 @@ project(vkidcollector)
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++98")
 
-include_directories("/home/ssi/mongo-client-install/include")
-link_directories("/home/ssi/mongo-client-install/lib")
+#include_directories("/home/ssi/mongo-client-install/include")
+#link_directories("/home/ssi/mongo-client-install/lib")
+include_directories("/home/ssi/mongo-myclient-install/include")
+link_directories("/home/ssi/mongo-myclient-install/lib")
 
 set(Boost_USE_STATIC_LIBS OFF)
 set(Boost_USE_MULTITHREADED OFF)
