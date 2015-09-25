@@ -9,5 +9,6 @@
 #include <iostream>
 #include <mongo/client/dbclient.h>
 
-std::vector< mongo::BSONElement > & collectData(vkmes::Request &request, boost::scoped_ptr< mongo::DBClientBase > &conn);
+std::vector< mongo::BSONElement > &collectData(vkmes::Request &request, boost::scoped_ptr< mongo::DBClientBase > &conn, const char *group_id);
+std::vector< unsigned > *newcomers(const std::vector< mongo::BSONElement > &newData, const char *group_id, boost::scoped_ptr< mongo::DBClientBase > &conn);
 #endif //VKIDCOLLECTOR_COLLECT_FUNC_H
