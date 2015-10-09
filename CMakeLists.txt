@@ -19,12 +19,16 @@ if (Boost_FOUND)
 endif ()
 
 set(SOURCE_FILES
-        maintest.cpp
+#        maintest.cpp
+        main.cpp
         renderexception.cpp
         Stack.h
-        request/Request.cpp
-        request/sp.cpp
-        collect_func.cpp
+#        request/Request.cpp
+#        request/sp.cpp
+#        collect_func.cpp
+#        pttest.cpp
+        servsock.cpp
+        dir.cpp
 )
 add_executable(vkidcollector ${SOURCE_FILES})
 target_link_libraries(vkidcollector
@@ -36,4 +40,5 @@ target_link_libraries(vkidcollector
         ${XMLPP_LIBRARIES}
         ${Boost_LIBRARIES}
         curl
+        fcgi
 )
